@@ -51,6 +51,7 @@ json_file = open("mnist_model.json","w")
 json_file.write(model_json)
 json_file.close()
 
+
 end_time = time.time()
 t = end_time - begin_time
 print(t)

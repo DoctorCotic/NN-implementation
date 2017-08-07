@@ -9,7 +9,6 @@ from keras.optimizers import SGD
 
 numpy.random.seed(42)
 
-
 (X_train, y_train), (X_test, y_test) = cifar10.load_data()
 batch_size = 32
 nb_classes = 10

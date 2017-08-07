@@ -19,17 +19,13 @@ model = Sequential()
 model.add(Embedding(max_features, 32))
 model.add(SpatialDropout1D(0.2))
 model.add(LSTM(100, dropout=0.2, recurrent_dropout=0.2))
-# Полносвязный слой
 model.add(Dense(1, activation="sigmoid"))
 
-# Копмилируем модель
 model.compile(loss='binary_crossentropy',
               optimizer='adam',
               metrics=['accuracy'])
 
-# Обучаем модель
 model.fit(X_train, y_train, batch_size=64, epochs=7, validation_data=(X_test, y_test), verbose=2)
-# Проверяем качество обучения на тестовых данных
 scores = model.evaluate(X_test, y_test,
                         batch_size=64)
-print("Точность на тестовых данных: %.2f%%" % (scores[1] * 100))
+print("The accuracy of the model on test data : %.2f%%" % (scores[1] * 100))

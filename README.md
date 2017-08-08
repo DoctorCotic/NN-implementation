@@ -6,7 +6,7 @@ Neural Networks
 3) NumPy is the fundamental package for scientific computing with Python
 
 ```Repositories```
-conv - Convolutional neural network by example cifar10
-istm -
-mnist - NN by mnist data
-vgg16 - NN recognizes images on pre-trained networks (16 layers)
+1. conv - Convolutional neural network by example cifar10
+2. istm -
+3. mnist - NN by mnist data
+4. vgg16 - NN recognizes images on pre-trained networks (16 layers)

@@ -5,7 +5,6 @@ from keras.models import Sequential
 from keras.layers import Dense
 from keras.utils import np_utils
 
-
 # NN recognizes handwritten figures
 # The algorithm receives an image and needs to recognize the correct digit
 
@@ -41,8 +40,6 @@ model.add(Dense(800, input_dim=784, activation="relu", kernel_initializer="norma
 model.add(Dense(600, activation="relu", kernel_initializer="normal"))
 model.add(Dense(10, activation="softmax", kernel_initializer="normal"))
 
-#SGD - метод стохастического градиента
-
 model.compile(loss="categorical_crossentropy", optimizer="SGD", metrics=["accuracy"])
 
 print(model.summary())
@@ -52,15 +49,13 @@ model.fit(X_train, Y_train, batch_size=25, epochs=125, validation_split=0.2, ver
 
 # evaluate the quality of the network training on the test data
 scores = model.evaluate(X_test, Y_test, verbose=0)
-print("The accuracy of the model on test data %.2f%%" % (scores[1]*100))
+print("The accuracy of the model on test data %.2f%%" % (scores[1] * 100))
 
 end_time = time.time()
 t = end_time - begin_time
 print(t)
 
 model_json = model.to_json()
-json_file = open("mnist_model.json","w")
+json_file = open("mnist_model.json", "w")
 json_file.write(model_json)
 json_file.close()
-
-

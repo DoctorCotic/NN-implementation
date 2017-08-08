@@ -1,12 +1,11 @@
 Neural Networks
-
 ===========================
-Necessary for work:
+```Necessary for work:```
 1) Theano or TensorFlow computational backend library
 2) Library of deep learning of the neural network Keras
 3) NumPy is the fundamental package for scientific computing with Python
 
-===========================
+```Repositories```
 conv - Convolutional neural network by example cifar10
 istm -
 mnist - NN by mnist data
